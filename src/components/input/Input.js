@@ -7,6 +7,7 @@ const Input = ({ message, setMessage, sendMessage }) => {
       <input
         placeholder="Type a message..."
         value={message}
+        maxLength="100"
         onChange={(event) => setMessage(event.target.value)}
         onKeyPress={(event) =>
           event.key === "Enter" ? sendMessage(event) : null

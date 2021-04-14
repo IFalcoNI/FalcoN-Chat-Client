@@ -17,12 +17,14 @@ const Join = () => {
           placeholder="Name"
           className="joinName"
           type="text"
+          maxLength="10"
           onChange={(event) => setName(event.target.value)}
         />
         <input
           placeholder="Room"
           className="joinRoom"
           type="text"
+          maxLength="10"
           onChange={(event) => setRoom(event.target.value)}
         />
         <Link
