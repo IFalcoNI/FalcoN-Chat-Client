@@ -1,4 +1,4 @@
 .Chat {
   width: 100%;
-  overflow: scroll;
+  overflow: hidden;
 }
