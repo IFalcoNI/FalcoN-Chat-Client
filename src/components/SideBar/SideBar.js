@@ -11,7 +11,7 @@ class SideBar extends Component {
     return (
       <Menu>
         <h2>Users</h2>
-        <Link id="subscribe" className="menu-item" href="/buy">
+        <Link id="subscribe" className="menu-item" to="/buy">
           Subscribe
         </Link>
       </Menu>
