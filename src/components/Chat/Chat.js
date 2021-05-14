@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import "../Chat/Chat.css";
 import Info from "../Info/Info";
 import Input from "../input/Input";
-import Messages from "../Messages/Messages"
+import Messages from "../Messages/Messages";
 
 let socket;
 const Chat = ({ location }) => {
@@ -12,12 +12,8 @@ const Chat = ({ location }) => {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'https://falcon-chat.herokuapp.com/';
-<<<<<<< HEAD
+  const ENDPOINT = "https://falcon-chat.herokuapp.com/";
   // const ENDPOINT = "localhost:5000";
-=======
-//   const ENDPOINT = "localhost:5000";
->>>>>>> b3cc2b7133b5bb5f0a4222aa163741ea4052da1b
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -48,19 +44,17 @@ const Chat = ({ location }) => {
     }
   };
   return (
-    (
-      <div className="chatFrame">
-        <div className="chatBox">
-          <Info room={room} />
-          <Messages messages={messages} name={name} />
-          <Input
-            message={message}
-            setMessage={setMessage}
-            sendMessage={sendMessage}
-          />
-        </div>
+    <div className="chatFrame">
+      <div className="chatBox">
+        <Info room={room} />
+        <Messages messages={messages} name={name} />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage}
+        />
       </div>
-    )
+    </div>
   );
 };
 
