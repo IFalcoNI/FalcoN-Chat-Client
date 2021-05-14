@@ -4,11 +4,11 @@
   align-items: center;
   width: 100vw;
   max-width: 1920px;
-  height: 98vh;
+  height: 100vh;
 }
 .chatBox {
   width: 100%;
-  height: 94%;
+  height: 97%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   /* border-radius: 10px; */
   padding: 0px 1% 1% 1%;
 }
-.rightInnerContainer > a > img{
- width: 10px;
- height: 10px;
+.rightInnerContainer > a > img {
+  width: 10px;
+  height: 10px;
 }

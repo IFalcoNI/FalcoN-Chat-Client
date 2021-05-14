@@ -3,8 +3,7 @@ body {
 }
 #root {
   width: 100%;
-  height: 100vh;
-  min-height: 200px;
+  min-height: 100vh;
   min-width: 200px;
   display: flex;
   justify-content: center;
@@ -18,6 +17,9 @@ html {
   font-size: 20px;
   background: rgb(55, 55, 55);
 }
+a {
+  text-decoration: none;
+}
 footer {
   display: flex;
   justify-content: space-around;
@@ -30,16 +32,22 @@ footer {
   right: 0;
 }
 
-.BackgroundUP,
+/* .BackgroundUP,
 .BackgroundDown {
-  position: fixed;
+  position: absolute;
+  display: none;
+  opacity: 0;
   left: 0;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
+  min-width: 300px;
   display: flex;
-  height: 3%;
+  height: 20px;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+}
+.BackgroundDown {
+  flex-shrink: 0;
 }
 .BackgroundUP {
   top: 0;
@@ -47,7 +55,7 @@ footer {
     180deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(26, 121, 179, 0.5) 0%,
-    rgb(55, 55, 55) 100%
+    rgba(55, 55, 55, 0) 100%
   );
 }
 .BackgroundDown {
@@ -57,9 +65,9 @@ footer {
     0deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(26, 121, 179, 0.5) 0%,
-    rgb(55, 55, 55) 100%
+    rgba(55, 55, 55, 0) 100%
   );
-}
+} */
 
 @keyframes shadow {
   0% {
