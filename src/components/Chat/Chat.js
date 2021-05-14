@@ -13,7 +13,11 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const ENDPOINT = 'https://falcon-chat.herokuapp.com/';
+<<<<<<< HEAD
   // const ENDPOINT = "localhost:5000";
+=======
+//   const ENDPOINT = "localhost:5000";
+>>>>>>> b3cc2b7133b5bb5f0a4222aa163741ea4052da1b
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
