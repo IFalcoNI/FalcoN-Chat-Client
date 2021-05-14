@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "../SideBar/SideBar.css";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom"
+import "../SideBar/SideBar.css";
 
 class SideBar extends Component {
   showSettings(event) {
@@ -10,9 +11,9 @@ class SideBar extends Component {
     return (
       <Menu>
         <h2>Users</h2>
-        <a id="subscribe" className="menu-item" href="/buy">
+        <Link id="subscribe" className="menu-item" href="/buy">
           Subscribe
-        </a>
+        </Link>
       </Menu>
     );
   }
