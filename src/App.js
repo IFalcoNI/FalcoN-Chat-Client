@@ -19,7 +19,7 @@ class App extends Component {
             <Route path="/join" component={Join}></Route>
             <Route path="/chat" component={Chat}></Route>
             <Route path="/buy" component={Buy}></Route>
-            <Route path="*" exact={true} component={Page404} />
+            <Route path="/404" component={Page404} />
           </Switch>
           {/* <Footer /> */}
         </Router>
