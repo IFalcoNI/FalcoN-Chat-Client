@@ -3,10 +3,10 @@ import onlineIcon from "../icons/onlineIcon.png";
 import closeIcon from "../icons/closeIcon.png";
 import SideBar from "../SideBar/SideBar";
 import "../Info/Info.css";
-const Info = ({ room }) => {
+const Info = ({ room, users }) => {
   return (
     <div className="InfoBar">
-        <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+        <SideBar users={users} pageWrapId={"page-wrap"} outerContainerId={"App"} />
       <div className="leftInnerContainer">
         <img className="onlineIcon" src={onlineIcon} alt="online" />
         <h3>{room}</h3>

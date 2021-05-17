@@ -12,6 +12,7 @@ const Chat = ({ location }) => {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [users, setUsers] = useState([]);
   const ENDPOINT = "https://falcon-chat.herokuapp.com/";
   // const ENDPOINT = "localhost:5000";
 
@@ -23,7 +24,6 @@ const Chat = ({ location }) => {
     });
     setName(name);
     setRoom(room);
-    console.log(socket);
     socket.emit("join", { name, room }, () => {});
 
     return () => {
@@ -43,6 +43,37 @@ const Chat = ({ location }) => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
+
+  useEffect(() => {
+    socket.on("usersList", (user) => {
+      setUsers([...users, user]);
+      let ol = document.createElement("ol");
+      let allUsers = user.users;
+      allUsers.forEach((usrs) => {
+        let Username = usrs.name;
+        let li = document.createElement("li");
+        li.innerHTML = Username;
+        ol.appendChild(li);
+      });
+      let UsersInRoom = document.querySelector("#users");
+      UsersInRoom.innerHTML = "";
+      UsersInRoom.appendChild(ol);
+    });
+  }, [users]);
+
+  // socket.on("usersList", (users) => {
+  //   setUsers([users.name])
+  //   let ol = document.createElement("ol");
+  //   users.forEach(function (user) {
+  //     let li = document.createElement("li");
+  //     li.innerHTML = user;
+  //     ol.appendChild(li);
+  //   });
+  //   let UsersInRoom = document.querySelector("#users");
+  //   UsersInRoom.innerHTML = "";
+  //   UsersInRoom.appendChild(ol);
+  // });
+
   return (
     <div className="chatFrame">
       <div className="chatBox">

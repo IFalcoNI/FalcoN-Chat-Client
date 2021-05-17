@@ -92,6 +92,35 @@ body {
   width: 100vw;
   height: 100vh;
 }
-#subscribe{
-color: cyan;
+.bm-menu {
+  padding: 0px;
+}
+.bm-item{
+padding: 10px 20px;
+}
+#subscribe {
+  color: cyan;
+}
+#users {
+  /* width: 100vw; */
+  /* height: 90%; */
+  overflow: scroll;
+  max-height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 5px solid rgb(83, 83, 83);
+}
+ol{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 25px;
+  /* list-style:lower-alpha; */
+}
+li {
+  font-size: 24px;
+  font-weight: 700;
+  color: aqua;
 }
