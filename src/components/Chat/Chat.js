@@ -51,29 +51,23 @@ const Chat = ({ location }) => {
       let allUsers = user.users;
       allUsers.forEach((usrs) => {
         let Username = usrs.name;
-        let li = document.createElement("li");
-        li.innerHTML = Username;
-        ol.appendChild(li);
+        if (socket.id === usrs.id) {
+          let p = document.createElement("p");
+          let li = document.createElement("li");
+          p.innerHTML = Username;
+          li.appendChild(p);
+          ol.appendChild(li);
+        } else {
+          let li = document.createElement("li");
+          li.innerHTML = Username;
+          ol.appendChild(li);
+        }
       });
       let UsersInRoom = document.querySelector("#users");
       UsersInRoom.innerHTML = "";
       UsersInRoom.appendChild(ol);
     });
   }, [users]);
-
-  // socket.on("usersList", (users) => {
-  //   setUsers([users.name])
-  //   let ol = document.createElement("ol");
-  //   users.forEach(function (user) {
-  //     let li = document.createElement("li");
-  //     li.innerHTML = user;
-  //     ol.appendChild(li);
-  //   });
-  //   let UsersInRoom = document.querySelector("#users");
-  //   UsersInRoom.innerHTML = "";
-  //   UsersInRoom.appendChild(ol);
-  // });
-
   return (
     <div className="chatFrame">
       <div className="chatBox">

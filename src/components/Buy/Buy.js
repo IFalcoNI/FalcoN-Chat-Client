@@ -5,7 +5,7 @@ class Buy extends Component {
   render() {
     return (
       <div className="BuyContainer">
-        <Link className="Arrow" to="/">&#8592;Home</Link>
+        <Link className="Arrow" to="/join">&#8592;Home</Link>
         <div className="BuyItem">
           <header>
             <h1 id="headerText">Basic</h1>
