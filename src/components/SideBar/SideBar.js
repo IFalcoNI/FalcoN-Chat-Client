@@ -24,9 +24,14 @@ const SideBar = ({ users }) => {
     <Menu>
       <h2>Users</h2>
       <div id="users"></div>
-      <Link id="subscribe" className="menu-item" to="/buy">
-        Subscribe
-      </Link>
+      <div id="SideInfo">
+        <Link id="subscribe" className="menu-item" to="/buy">
+          Subscribe
+        </Link>
+        <Link id="feedback" className="menu-item" to="/feedback">
+          Feedback
+        </Link>
+      </div>
     </Menu>
   );
 };

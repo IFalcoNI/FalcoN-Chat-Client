@@ -99,11 +99,16 @@ body {
   padding: 5px 10px;
   text-align: center;
 }
+.bm-item a{
+  padding: 5px 10px;
+}
 h2 {
   margin: 30px 20px;
 }
+
+#feedback,
 #subscribe {
-  color: rgb(94, 255, 0);
+  color: rgba(0, 238, 255, 0.541);
 }
 #users {
   /* width: 100vw; */
@@ -144,9 +149,15 @@ ol li {
   height: 50px;
   margin: 10px 0;
   border-radius: 25px;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 }
 ol li:hover {
   background-color: rgb(190, 190, 190);
+}
+#SideInfo{
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-around;
+  padding: 0;
 }
