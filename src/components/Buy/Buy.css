@@ -1,6 +1,8 @@
 * {
   color: white;
 }
+.Explosion {
+}
 .BuyContainer {
   display: flex;
   justify-content: space-around;
@@ -25,7 +27,7 @@
   transition: all 0.3s ease-in-out;
 }
 .BuyItem:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .Subscribe {
   width: 100px;
@@ -34,6 +36,12 @@
   outline: none;
   border: none;
   font-weight: 900;
+}
+@keyframes bang {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 #GreenSubscribe {
   background-color: rgba(0, 128, 0, 0.795);

@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Buy/Buy.css";
-import load from "little-loader";
+import Confetti from "react-confetti";
 const Buy = () => {
-  load("", function (err) {});
-
-  function BuyAnimation() {}
+  const size = useWindowSize();
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return windowSize;
+  }
   return (
     <div className="BuyContainer">
+      <Confetti
+        run={setTimeout(true, 1000)}
+        // tweenDuration={10}
+        width={size.width}
+        height={size.height}
+      />
       <Link className="Arrow" to="/join">
         &#8592;Home
       </Link>
@@ -32,7 +54,7 @@ const Buy = () => {
           id="GreenSubscribe"
           type="Button"
           value="Subscribe"
-          onClick={BuyAnimation()}
+          // onClick={}
         />
       </div>
       <div className="BuyItem">
@@ -56,7 +78,7 @@ const Buy = () => {
           id="RedSubscribe"
           type="Button"
           value="Subscribe"
-          onClick={BuyAnimation()}
+          // onClick={() => setIsExploding(true)}
         />
       </div>
       <div className="BuyItem">
@@ -80,11 +102,10 @@ const Buy = () => {
           id="OrangeSubscribe"
           type="Button"
           value="Subscribe"
-          onClick={BuyAnimation()}
+          onClick={() => {}}
         />
       </div>
     </div>
   );
 };
-
 export default Buy;
