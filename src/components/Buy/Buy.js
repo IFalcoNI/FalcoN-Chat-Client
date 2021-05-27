@@ -33,6 +33,40 @@ const Buy = () => {
       <Link className="Arrow" to="/join">
         &#8592;Home
       </Link>
+      <table className="BuyItemRotate">
+        <th id="headerText">Table</th>
+        <tr>
+          <td id="h2">
+            <p id="RedPrice">0</p>.00$
+          </td>
+        </tr>
+        <tr>
+          <td id="Closed">&#10006;</td>
+        </tr>
+        <tr>
+          <td id="Closed">&#10006;</td>
+        </tr>
+        <tr>
+          <td id="Closed">&#10006;</td>
+        </tr>
+        <tr>
+          <td id="Closed">&#10006;</td>
+        </tr>
+        <tr>
+          <td id="Closed">&#10006;</td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              className="Subscribe"
+              id="GreenSubscribe"
+              type="Button"
+              value="Subscribe"
+              // onClick={}
+            />
+          </td>
+        </tr>
+      </table>
       <div className="BuyItem">
         <header>
           <h1 id="headerText">Basic</h1>
