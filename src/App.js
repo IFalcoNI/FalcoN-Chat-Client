@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import Buy from "./components/Buy/Buy";
 import Page404 from "./components/Page404/Page404";
 import FeedBack from "./components/FeedBack/FeedBack";
+import Skeleton from "./components/Skeleton/SkeletonAPP";
 class App extends Component {
   render() {
     return (
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/chat" component={Chat}></Route>
             <Route path="/buy" component={Buy}></Route>
             <Route path="/feedback" component={FeedBack}></Route>
+            <Route path="/skeleton" component={Skeleton}></Route>
             <Route path="/*" exact={true} component={Page404} />
           </Switch>
         </Router>
